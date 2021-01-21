@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <style>
+        .btn_up_layer {
+            position: absolute;
+            top: 950px;
+            right: 30px;
+            border: none;
+            padding: 0px;
+            z-index: 1;
+        }
+    </style>
+</head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span><img src="~/Img/Nav_Main3.jpg" width="50" height="50" /><a class="navbar-brand" href="#"></a></span>
+                </div>
+                <div class="collapse navbar-collapse navbar-dark" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="dropdown dropdown-toggle" data-toggle="dropdown" href="">
+                                로크홀라 (1서버)
+                                <!-- 화살표 -->
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Horde - 호드 </a></li>
+                                <li><a href="#">Alliance - 얼라이언스 </a></li>
+                                <li><a href="#">Neutral - 중립 </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown dropdown-toggle" data-toggle="dropdown" href="">
+                                라그나로스 (2서버)
+                                <!-- 화살표 -->
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Horde - 호드 </a></li>
+                                    <li><a href="#">Alliance - 얼라이언스 </a></li>
+                                    <li><a href="#">Neutral - 중립 </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown dropdown-toggle" data-toggle="dropdown" href="">
+                                얼음피 (3서버)
+                                <!-- 화살표 -->
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Horde - 호드 </a></li>
+                                    <li><a href="#">Alliance - 얼라이언스 </a></li>
+                                    <li><a href="#">Neutral - 중립 </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown dropdown-toggle" data-toggle="dropdown" href="">
+                                힐스브래드 (4서버)
+                                <!-- 화살표 -->
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Horde - 호드 </a></li>
+                                    <li><a href="#">Alliance - 얼라이언스 </a></li>
+                                    <li><a href="#">Neutral - 중립 </a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <button class="btn_up_layer"><img src="~/Img/chat.png" wdith="60" height="60"/></button>
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

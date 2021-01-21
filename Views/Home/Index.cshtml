@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<head>
+    <!--
+
+    _Layout 에서 로드
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <link href="~/Scripts/css/bootstrap.min.css" />
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <script src="~/Scripts/Main/sell_Chart.js"></script>
+    <script src="~/Scripts/Main/main.js"></script>
+    <script src="~/Scripts/Main/dropdown.js"></script>
+    <script src="~/Scripts/SMTP/email_modal.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="~/Img/Greedy_Goblin.jpg" width="250" height="250" class="img-circle" alt="Greedy_Goblin" />
+                <br /><br />
+                <form  class="form-inline">
+                    <font id='server_name'> <b>로크홀라 - 호드 </b> </font>
+                    <input class="form-control input_item" type="text" placeholder="Item name" name="insert_name" id="insert_name" aria-label="Search" autocomplete="off" style="width:300px" hidden>
+                    <input class="form-control input_item" type="text" placeholder="Item name" name="item_name" id="item_name" aria-label="Search" autocomplete="off" style="width:0px; display:none">
+                    <input type="button" class="btn btn-default" name="search_btn" id="search_btn" value="검색">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1 col-md-4">
+                <div class="text-center">
+                    <canvas id="myChart" width="800" height="800"></canvas>
+                </div>
+            </div>
+            <div class="col-sm-1 col-md-8 center-block">
+                <div class="text-center">
+                    <canvas id="myChart2" class="text-center" width="400" height="400"></canvas>
+                     <!-- 필요 기능 
+                           1. 기본으로 가장 검색어 1위의 가격 그래프를 출력한다.
+                           2. 사용자가 input field에 입력 후 검색시에 기존 그래프를 삭제
+                           3. 기존그래프 삭제 후 사용자가 찾는 아이템의 그래프를 출력해준다.
+                     -->
+                </div>
+            </div>
+         </div>
+    </div>
+</body>
